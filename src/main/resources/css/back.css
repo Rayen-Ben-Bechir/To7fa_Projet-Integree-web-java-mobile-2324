@@ -1,0 +1,19 @@
+.menuItem:hover{
+    -fx-border-color: #813535;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.sidebarItem{
+    -fx-background-color: #813535;;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.sidebarItemBar{
+    -fx-background-color: white;;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.right-bar{
+    -fx-background-color: #813535;
+}
+.default-color0.chart-bar{ -fx-bar-fill:#B47B84;
+
+}
