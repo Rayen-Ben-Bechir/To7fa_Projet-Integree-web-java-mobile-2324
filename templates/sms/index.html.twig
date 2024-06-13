@@ -1,0 +1,128 @@
+{# templates/send_sms.html.twig #}
+
+ 
+ 
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h3 class="text-center">Envoyer le code</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="{{path('send_sms')}}">
+                            <div class="form-group">
+                                <label for="number">Numéro de téléphone :</label>
+                                <input type="text" name="number" id="number" class="form-control" required>
+                            </div>
+
+                            <div class="form-group" id="form-name">
+                                <label for="name">Nom de l'expéditeur :</label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block" id="btn">Envoyer le SMS</button>
+                        </form>
+          <form action="{{ path('verify_code') }}" method="post">
+                            <div class="form-group">
+                             </div>
+                            <button type="submit" class="btn btn-primary btn-block">Vérifier le code</button>
+                        </form>
+                    </div>
+                </div>                        
+
+                {% if smsSent %}
+                    <div class="alert alert-success mt-3 text-center">Le SMS a été envoyé avec succès.</div>
+             
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+    
+      .card-body
+      {
+        position: relative;
+        height: 323px;
+      }
+
+      #btn
+      {
+        position: relative;
+        top: 47px;
+        left: 188px;
+      }
+
+      #form-name
+      {
+        position: relative;
+        top: 10px;
+      }
+
+      #form-message
+      {
+        position: relative;
+        top: 27px;
+      }
+    </style>
+    <style>
+  .card-body {
+    position: relative;
+    height: 323px;
+  }
+
+  #btn {
+    position: absolute;
+    left: 1px; /* Adjust this value to move the button horizontally */
+    top: 257px;
+  }
+
+  #form-name {
+    position: relative;
+    top: 10px;
+  }
+
+  #form-message {
+    position: relative;
+    top: 27px;
+  }
+</style>
+{% endblock %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700') }}" rel="stylesheet">
+
+  <link href="{{ asset('form/css/style.css') }}" rel="stylesheet" type="text/css">
+
+	</head>
+ 
+
+<script src="{{ asset('form/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('form/js/popper.js') }}"></script>
+ <script src="{{ asset('form/js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('form/js/jquery.validate.min.js') }}"></script>
+ <script src="{{ asset('form/js/main.js') }}"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	</body>
+</html>
+
+ 
+
+
+
+
+
+
+

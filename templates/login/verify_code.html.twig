@@ -1,0 +1,113 @@
+{% block body %} 
+  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <h3 class="text-center">Confirmation du code</h3>
+                    </div>
+ <p>Verification Code: {{ app.session.get('sent_code') }}</p> {# Display the stored code for testing purposes #} 
+ <form action="{{ path('verify_code') }}" method="POST" class="mt-5">
+         <div class="form-group">
+
+            <label for="code">Entrer le code de Vérification :</label>
+                        <input type="text" id="code" name="code" class="form-control" required>
+        </div>
+
+ 
+
+        <div class="form-group">
+ 
+  <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email"class="form-control" required>
+         </div>
+
+        <div class="form-group">
+
+            <label for="new_password">Nouveau mot de passe:</label>
+            <input type="password" id="new_password" name="new_password" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirmer</button>
+</form>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700') }}" rel="stylesheet">
+
+  <link href="{{ asset('form/css/style.css') }}" rel="stylesheet" type="text/css">
+
+	</head>
+ 
+
+<script src="{{ asset('form/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('form/js/popper.js') }}"></script>
+ <script src="{{ asset('form/js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('form/js/jquery.validate.min.js') }}"></script>
+ <script src="{{ asset('form/js/main.js') }}"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	</body>
+</html>
+
+ 
+
+
+
+
+     <style>
+      .form-control { width: 75%; }
+    .btn-sm { /* Style for smaller button */
+        padding: 5px 10px; /* Adjust padding as needed */
+        font-size: 14px; /* Adjust font size as needed */
+    }
+
+    .card-body {
+        min-height: 100vh; /* Make the card body at least as tall as the viewport */
+    }
+
+    .card-body { display: flex; flex-direction: column; justify-content: center; height: 100%; }
+
+    .d-flex.align-items-center.justify-content-center {
+        min-height: 100%; /* Make the inner div fill the entire height of the card body */
+    }
+</style>
+
+     
+    <style>
+  .card-body {
+    position: relative;
+    height: 323px;
+  }
+
+  
+
+  #form-name {
+    position: relative;
+    top: 10px;
+  }
+
+  #form-message {
+    position: relative;
+    top: 27px;
+  }
+</style>
+
+
+ 
+
+

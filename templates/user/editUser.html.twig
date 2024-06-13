@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+      {% block stylesheets %}
+
+ <link href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700') }}" rel="stylesheet">
+
+ 			<!--
+			CSS
+			============================================= -->
+			    <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+			    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+ {% endblock %}
+	    {% block navbar %}
+
+			  <header id="header" id="home">
+			  	<div class="container header-top">
+			  		<div class="row">
+				  		<div class="col-6 top-head-left">
+				  			<ul>
+				  				<li><a href="#">Visit Us</a></li>
+				  				<li><a href="#">Buy Ticket</a></li>
+				  			</ul>
+				  		</div>
+				  		<div class="col-6 top-head-right">
+				  			<ul>
+		  						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+				  			</ul>
+				  		</div>			  			
+			  		</div>
+			  	</div>
+			  	<hr>
+			    <div class="container">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+ 				    
+					  </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="index.html">Home</a></li>
+				          <li><a href="about.html">About</a></li>
+				          <li><a href="gallery.html">Gallery</a></li>
+				          <li><a href="event.html">Events</a></li>
+          <li class="nav-item"><a href="{{ path('edit_user', {'id': user.userId}) }}" class="nav-link">Profile</a></li>
+				       				                  <li class="nav-item"><a href="{{ path('app_logout') }}"class="nav-link">Déconnexion</a></li>
+
+                          <li><a href="blog-home.html">Blog</a></li>
+				          <li><a href="contact.html">Contact</a></li>
+				          <li class="menu-has-children"><a href="">Pages</a>
+				            <ul>
+				              <li><a href="blog-single.html">Blog Single</a></li>
+				              <li><a href="category.html">Category</a></li>
+				              <li><a href="elements.html">Elements</a></li>
+				            </ul>
+				          </li>			          
+				        </ul>
+				      </nav><!-- #nav-menu-container -->	
+                              {% endblock %}
+	    
+ 
+{% block serviceblock %}
+    <div class="container">
+        <div class="header">
+            <h2> </h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8 border rounded main-content">
+                <div class="user-info">
+                    <div class="user-info">
+                        {% if user.userImage == 'default_image.jpg' %}
+                            <img class="profile-pic" src="https://thumbs.dreamstime.com/b/user-profile-vector-flat-illustration-avatar-person-icon-gender-neutral-silhouette-profile-picture-user-profile-vector-flat-304778094.jpg" alt="Random Profile Picture">
+                        {% elseif user.userImage %}
+                            <img class="profile-pic" src="{{ asset('images/' ~ user.userImage) }}" alt="Profile Picture">
+                        {% endif %}
+                        <span class="font-weight-bold">Welcome {{ user.userName }}</span>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Form to edit user profile -->
+                {{ form_start(form) }}
+                <div class="form-row">
+                    <div class="col-md-6">
+                        {{ form_label(form.userName, 'Nom', {'label_attr': {'class': 'labels'}}) }}
+                        {{ form_widget(form.userName, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_label(form.userPhone, 'Numéro de téléphone', {'label_attr': {'class': 'labels'}}) }}
+                        {{ form_widget(form.userPhone, {'attr': {'class': 'form-control', 'placeholder': 'Numéro de téléphone'}}) }}
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6">
+                        {{ form_label(form.userEmail, 'Email', {'label_attr': {'class': 'labels'}}) }}
+                        {{ form_widget(form.userEmail, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_label(form.userPassword, 'Mot de passe', {'label_attr': {'class': 'labels'}}) }}
+                        {{ form_widget(form.userPassword, {'attr': {'class': 'form-control', 'placeholder': 'Mot de passe'}}) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.userSexe, 'Sexe', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="sexe-addon"><i class="fas fa-venus-mars"></i></span>
+                        </div>
+                        {{ form_widget(form.userSexe, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- Add input for image upload -->
+                    {{ form_label(form.image, 'Image', {'label_attr': {'class': 'text-muted'}}) }}
+                    {{ form_widget(form.image, {'attr': {'class': 'form-control-file'}}) }}
+                </div>
+                <!-- Add other form fields as needed -->
+                <div class="form-group d-flex justify-content-between">
+                    <button class="btn btn-primary" type="submit">Modifier</button>
+                    <a href="{{ path('delete_user', {'id': user.userId}) }}" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account?');">Supprimer mon compte</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+    </div> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700') }}" rel="stylesheet">
+
+  <link href="{{ asset('form/css/style.css') }}" rel="stylesheet" type="text/css">
+
+	</head>
+ 
+<style>
+.profile-pic {
+  width: 200px; /* Set a fixed width */
+  height: 200px; /* Set a fixed height */
+  object-fit: cover; /* Fill the entire area while maintaining aspect ratio */
+  border-radius: 50%; /* Make it circular */
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+</style>
+<script src="{{ asset('form/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('form/js/popper.js') }}"></script>
+ <script src="{{ asset('form/js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('form/js/jquery.validate.min.js') }}"></script>
+ <script src="{{ asset('form/js/main.js') }}"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	</body>
+</html>
+
+ 
+
+
+{% endblock %}

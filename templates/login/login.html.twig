@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5dc; /* Couleur beige */
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    .login-form {
+      background-color: #fff; /* Couleur blanc */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+
+     
+    .btn-login {
+      width: 100%;
+      background-color: #d2b48c; /* Couleur du bouton (beige) */
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      color: #fff; /* Couleur du texte du bouton */
+    }
+
+    .btn-login:hover {
+      background-color: #deb887; /* Couleur au survol (beige plus clair) */
+    }
+
+    .btn-registration {
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .btn-registration a {
+      text-decoration: none;
+      color: #d2b48c; /* Couleur du texte des liens (beige) */
+    }
+
+    .btn-registration a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-form">
+                    <h2>Connexion</h2>
+                    {% for message in app.flashes('error') %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    <form action="{{ path('check_role') }}" method="POST">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-login">Login</button>
+                    </form>
+                   
+                    <div class="btn-registration">
+<a href="{{ path('add_user') }}">Vous n'avez pas de compte? Inscrivez-vous </a>
+                    </div>
+                    
+<div class="forgot-password">
+    <a href="{{ path('forgot_password') }}">J'ai oublié mon mot de passe</a>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ 
+ 	
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700') }}" rel="stylesheet">
+
+  <link href="{{ asset('form/css/style.css') }}" rel="stylesheet" type="text/css">
+
+	</head>
+ 
+
+<script src="{{ asset('form/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('form/js/popper.js') }}"></script>
+ <script src="{{ asset('form/js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('form/js/jquery.validate.min.js') }}"></script>
+ <script src="{{ asset('form/js/main.js') }}"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	</body>
+</html>
+
+ 
+

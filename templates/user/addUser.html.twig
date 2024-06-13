@@ -1,0 +1,253 @@
+{% block content %}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+.login-form {
+    background-color: #fff; /* Couleur blanc */
+    padding: 10px; /* Reduced padding */
+    border-radius: 5px; /* Slightly reduced border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Reduced box shadow */
+}
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin */
+    color: #555; /* Couleur du texte */
+    font-size: 24px; /* Reduced font size */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 16px; /* Reduced font size */
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Couleur de la bordure */
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #d2b48c; /* Couleur du bouton (beige) */
+    border: none;
+    border-radius: 5px;
+    padding: 8px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
+    color: #fff; /* Couleur du texte du bouton */
+}
+
+.btn-login:hover {
+    background-color: #deb887; /* Couleur au survol (beige plus clair) */
+}
+  </style>
+</head>
+   <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center mb-4">Inscription</h1>
+            <form action="{{ path('add_user') }}" method="post" {{ form_start(form, {attr: {'novalidate': 'novalidate'}}) }}
+
+                {% for message in app.flashes('error') %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                <div class="form-group">
+                    {{ form_label(form.userEmail, 'Email', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="email-addon"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        {{ form_widget(form.userEmail, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre email'}}) }}
+                    </div>
+                    {{ form_errors(form.userEmail) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.userName, 'Nom', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="name-addon"><i class="fas fa-user"></i></span>
+                        </div>
+                        {{ form_widget(form.userName, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre nom'}}) }}
+                    </div>
+                    {{ form_errors(form.userName) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.userPassword.first, 'Mot de passe', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="password-addon"><i class="fas fa-lock"></i></span>
+                        </div>
+                        {{ form_widget(form.userPassword.first, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre mot de passe'}}) }}
+                    </div>
+                    {{ form_errors(form.userPassword.first) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.userPassword.second, 'Confirmez le mot de passe', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="password-confirm-addon"><i class="fas fa-lock"></i></span>
+                        </div>
+                        {{ form_widget(form.userPassword.second, {'attr': {'class': 'form-control', 'placeholder': 'Confirmez votre mot de passe'}}) }}
+                    </div>
+                    {{ form_errors(form.userPassword.second) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.userPhone, 'Numéro de téléphone', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="phone-addon"><i class="fas fa-phone"></i></span>
+                        </div>
+                        {{ form_widget(form.userPhone, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre numéro de téléphone'}}) }}
+                    </div>
+                    {{ form_errors(form.userPhone) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.userSexe, 'Sexe', {'attr': {'class': 'text-muted'}}) }}
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="sexe-addon"><i class="fas fa-venus-mars"></i></span>
+                        </div>
+                        {{ form_widget(form.userSexe, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    {{ form_errors(form.userSexe) }}
+                </div>
+<div class="form-group">
+    {{ form_label(form.image, 'Image', {'label_attr': {'class': 'text-muted'}}) }}
+    {{ form_widget(form.image, {'attr': {'class': 'form-control-file'}}) }}
+    {{ form_errors(form.image) }}
+</div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                                        <a href="{{ path('app_connect') }}" class="btn btn-link">Retour à la connexion</a>
+
+                </div>
+
+
+
+            {{ form_end(form) }}
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 	
+ 
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,100,300,700') }}" rel="stylesheet">
+
+  <link href="{{ asset('form/css/style.css') }}" rel="stylesheet" type="text/css">
+
+	</head>
+ 
+
+<script src="{{ asset('form/js/jquery.min.js') }}"></script>
+ <script src="{{ asset('form/js/popper.js') }}"></script>
+ <script src="{{ asset('form/js/bootstrap.min.js') }}"></script>
+ <script src="{{ asset('form/js/jquery.validate.min.js') }}"></script>
+ <script src="{{ asset('form/js/main.js') }}"></script>
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	</body>
+</html>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
