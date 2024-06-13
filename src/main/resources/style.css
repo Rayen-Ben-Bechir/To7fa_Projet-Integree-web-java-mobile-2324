@@ -1,0 +1,97 @@
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #813535;
+    -fx-background-radius: 30;
+}
+.search-button {
+    -fx-background-color: #813535; /* Default background color */
+    -fx-background-radius: 30; /* Rounded corners */
+}
+
+.search-button:hover {
+    -fx-background-color: #A94E4E; /* Lighter color when mouse hovers over */
+}
+
+.search-button:pressed {
+    -fx-background-color: #5A2525; /* Different color when button is pressed */
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+.chosen-fruit-card{
+    -fx-background-color: #813535;
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+
+.add-btn:hover {
+    -fx-background-color: #813535; /* Background color when mouse is over the button */
+}
+
+.free-delivery-card{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+.shopping-online-card{
+    -fx-background-color: #BAEAC3;
+    -fx-background-radius: 30;
+}
+
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+.circular-image {
+    border-radius: 50%;
+}
+.weather-window {
+    -fx-background-radius: 20; /* adjust the radius to your preference */
+}
+.choiceBox {
+    -fx-background-color: #813535;
+    -fx-border-color: transparent; /* Border color */
+    -fx-padding: 5px; /* Padding */
+    -fx-font-size: 14px; /* Font size */
+    -fx-background-radius: 30; /* Background radius */
+    -fx-text-fill: white; /* Text color */
+    /* Add more CSS properties as needed */
+}
+.choiceBox {
+    -fx-background-color: #813535; /* Default background color */
+    -fx-background-radius: 30; /* Rounded corners */
+}
+
+.choiceBox:hover {
+    -fx-background-color: #A94E4E; /* Lighter color when mouse hovers over */
+}
+.transparent {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-border-color: transparent;
+}

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="753.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReservationFXML">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="41.0" layoutY="63.0" prefHeight="18.0" prefWidth="421.0" text="Musées" textAlignment="CENTER">
+         <font>
+            <Font name="Arabic Typesetting" size="72.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <!-- Center the ImageView within the AnchorPane -->
+            <ImageView fitHeight="399.0" fitWidth="422.0" layoutX="-111.0" layoutY="-137.6" AnchorPane.bottomAnchor="536.0" AnchorPane.leftAnchor="-111.0" AnchorPane.rightAnchor="1032.0" AnchorPane.topAnchor="-138.0">
+               <image>
+                  <Image url="@422753690_409252038212984_8647405955157622496_n.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1099.0" layoutY="30.0" prefHeight="62.0" prefWidth="100.0" text="My Account" textFill="#878787">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="sortChoiceBox" layoutX="1057.0" layoutY="124.0" prefHeight="22.0" prefWidth="150.0" styleClass="choiceBox" stylesheets="@style.css" />
+            <Button fx:id="trierbtn" layoutX="950.0" layoutY="126.0" mnemonicParsing="false" onAction="#trierParNom" prefHeight="38.0" prefWidth="88.0" stylesheets="@style.css" text="A-Z" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="search-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+            <Button fx:id="defaultbtn" layoutX="842.0" layoutY="126.0" mnemonicParsing="false" onAction="#resetToDefault" prefHeight="38.0" prefWidth="88.0" styleClass="search-button" stylesheets="@style.css" text="Default" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox layoutX="486.0" layoutY="12.0" prefHeight="100.0" prefWidth="595.0">
+               <children>
+                  <Pane prefHeight="84.0" prefWidth="96.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="380.0" styleClass="free-delivery-card" stylesheets="@style.css">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="214.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="190.0" text="Free delivery" textFill="#878787">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="16.0" prefWidth="190.0" text="over $20 order" textFill="#878787">
+                                 <font>
+                                    <Font name="Cambria" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="61.0" fitWidth="58.0">
+                           <image>
+                              <Image url="@assets/ic_delivery.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="84.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="332.0" styleClass="shopping-online-card" stylesheets="@style.css">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="82.0" prefWidth="203.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="190.0" text="Shopping online" textFill="#878787">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="207.0" text="get your shopping in same day" textFill="#878787">
+                                 <font>
+                                    <Font name="Cambria" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="39.0" fitWidth="38.0">
+                           <image>
+                              <Image url="@assets/ic_stopwatch.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Label layoutX="257.0" layoutY="24.0" prefHeight="25.0" prefWidth="107.0" text="Language" textFill="#878787">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="24.0" prefHeight="25.0" prefWidth="78.0" text="English" textFill="#878787" underline="true">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="423.0" layoutY="24.0" prefHeight="25.0" prefWidth="78.0" text="French" textFill="#878787">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="62.0" fitWidth="60.0" layoutX="1188.0" layoutY="19.0">
+               <image>
+                  <Image url="@assets/ic_cart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="480.0" layoutY="112.0" prefHeight="51.0" prefWidth="318.0" spacing="10.0" stylesheets="@style.css">
+         <styleClass>
+            <String fx:value="search-box" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TextField fx:id="searchfield" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="search-box" stylesheets="@style.css">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+         </children>
+         <padding>
+            <Insets right="15.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="41.0" layoutY="178.0" prefHeight="507.0" prefWidth="350.0" spacing="15.0" stylesheets="@style.css">
+         <children>
+            <HBox prefHeight="102.0" prefWidth="358.0">
+               <children>
+                  <Label fx:id="nameLabel" contentDisplay="CENTER" prefHeight="37.0" prefWidth="330.0" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="508.0" prefWidth="350.0" spacing="10.0">
+               <ImageView fx:id="imageView" fitHeight="117.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
+                  <effect>
+                     <DropShadow offsetX="3.0" offsetY="3.0" radius="5.0" />
+                  </effect>
+                  <VBox.margin>
+                     <Insets top="20.0" />
+                  </VBox.margin>
+               </ImageView>
+               <Label fx:id="cityLabel" contentDisplay="CENTER" prefHeight="51.0" prefWidth="350.0" textFill="WHITE">
+                  <font>
+                     <Font name="Cambria" size="18.0" />
+                  </font>
+               </Label>
+               <Label fx:id="detailsLabel" prefHeight="344.0" prefWidth="312.0" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="Cambria" size="18.0" />
+                  </font>
+               </Label>
+            </VBox>
+            <HBox prefHeight="98.0" prefWidth="355.0" />
+            <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0" />
+            <Button fx:id="weatherBtn" mnemonicParsing="false" onMouseClicked="#onWeatherClicked" prefHeight="34.0" prefWidth="183.0" styleClass="add-btn" stylesheets="@style.css" text="Check weather" textFill="#828282">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="reserverbtn" mnemonicParsing="false" onMouseClicked="#onReserverButtonClick" prefHeight="91.0" prefWidth="270.0" styleClass="add-btn" stylesheets="@style.css" text="Reserve">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="chosen-fruit-card" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </VBox>
+      <ScrollPane fx:id="scrollPane" layoutX="469.0" layoutY="178.0" prefHeight="558.0" prefWidth="874.0" styleClass="transparent" stylesheets="@style1.css">
+         <content>
+            <FlowPane fx:id="museeContainer" hgap="30.0" onMouseClicked="#obtenirIdMuseeSelectionne" prefHeight="504.0" prefWidth="864.0" prefWrapLength="0.0" vgap="30.0" />
+         </content>
+      </ScrollPane>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Pane prefHeight="84.0" prefWidth="96.0" />
+            <Pane prefHeight="84.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

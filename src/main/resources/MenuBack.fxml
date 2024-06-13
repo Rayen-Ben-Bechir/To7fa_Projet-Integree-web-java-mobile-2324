@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuBack">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" stylesheets="@Color_MenuBack.css">
+            <children>
+                <BorderPane layoutX="119.0" layoutY="55.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane fx:id="AP_SEMI_ABOVE" prefHeight="45.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="AP_ABOVE" layoutX="41.0" layoutY="-77.0" prefHeight="35.0" prefWidth="1100.0" stylesheets="@Color_MenuBack.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="9.0" text="Oeuvre Managment System : Espace ADMIN">
+                                            <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="close" layoutX="1021.0" layoutY="5.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="55.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/reject.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic></Button>
+                                        <Button fx:id="minimize" layoutX="1000.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="43.0" AnchorPane.rightAnchor="56.8" AnchorPane.topAnchor="2.0">
+                                            <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/minimize.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic></Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="555.0" prefWidth="203.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="AP_LEFT" layoutX="2.0" layoutY="108.0" prefHeight="555.0" prefWidth="203.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <ImageView fx:id="imageview_MenuBack" fitHeight="86.0" fitWidth="90.0" layoutX="59.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+                                        <Label layoutX="65.0" layoutY="112.0" text="Welcome," textFill="WHITE">
+                                            <font>
+                                                <Font name="Tahoma" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="label_username" alignment="CENTER" layoutX="7.0" layoutY="133.0" prefHeight="23.0" prefWidth="190.0" text="Admin" textFill="WHITE">
+                                            <font>
+                                                <Font name="Arial Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="85.0" layoutX="109.0" layoutY="173.0" startX="-100.0" stroke="WHITE" />
+                                        <Button fx:id="btn_home" layoutX="168.0" layoutY="512.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="3.0" prefWidth="0.0" />
+                                        <Button fx:id="btn_profil" layoutX="12.0" layoutY="179.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="12.0" prefWidth="180.0" text="Profil" />
+                              <Button fx:id="btn_gestion_users" layoutX="12.0" layoutY="207.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="24.0" prefWidth="180.0" text="Gestion users" />
+                                        <Button fx:id="btn_logout" layoutX="12.0" layoutY="509.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="15.0">
+                                            <graphic>
+                                                <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@images/logout_admin.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                              <Button fx:id="btngestionmusee" layoutX="12.0" layoutY="235.0" mnemonicParsing="false" onAction="#onGestionmusee" prefHeight="11.0" prefWidth="180.0" text="Gestion musee" />
+                              <Button fx:id="btngestionreservation" layoutX="12.0" layoutY="263.0" mnemonicParsing="false" onAction="#onGestionReservation" prefHeight="10.0" prefWidth="180.0" text="Gestion reservation" />
+                              <Button fx:id="btn_gestion_evenement" layoutX="13.0" layoutY="290.0" mnemonicParsing="false" onAction="#evenementAdmin" prefHeight="0.0" prefWidth="180.0" text="Gestion évenement" />
+                              <Button fx:id="btn_gestion_oeuvre" layoutX="13.0" layoutY="345.0" mnemonicParsing="false" onAction="#oeuvre" prefHeight="0.0" prefWidth="180.0" text="Gestion oeuvre" />
+                              <Button fx:id="btn_gestion_commande" layoutX="13.0" layoutY="316.0" mnemonicParsing="false" onAction="#commande" prefHeight="0.0" prefWidth="180.0" text="Gestion commande" />
+                              <Button fx:id="btn_gestion_categorie" layoutX="13.0" layoutY="373.0" mnemonicParsing="false" onAction="#categorie" prefHeight="0.0" prefWidth="180.0" text="Gestion catégorie" />
+                              <Button fx:id="btn_gestion_livraison" layoutX="14.0" layoutY="402.0" mnemonicParsing="false" onAction="#livraison" prefHeight="0.0" prefWidth="180.0" text="Gestion livraison" />
+                              <Button fx:id="btn_gestion_livreur" layoutX="14.0" layoutY="431.0" mnemonicParsing="false" onAction="#livreur" prefHeight="0.0" prefWidth="180.0" text="Gestion livreur" />
+                                    </children>
+                                </AnchorPane>
+                                <Label layoutX="61.0" layoutY="516.0" text="Sign Out" textFill="WHITE">
+                                    <font>
+                                        <Font name="Tahoma" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="home_form" layoutX="13.0" layoutY="12.0" prefHeight="532.0" prefWidth="872.0" visible="false">
+                                    <children>
+                                        <Label disable="true" layoutX="350.0" layoutY="229.0" prefHeight="65.0" prefWidth="171.0" text="Home">
+                                            <font>
+                                                <Font name="Arial" size="64.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="profil_form" layoutX="99.0" layoutY="143.0" prefHeight="555.0" prefWidth="897.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane fx:id="card" layoutX="13.0" layoutY="13.0" prefHeight="527.0" prefWidth="870.0">
+                                            <children>
+                                                <Label fx:id="label_name" layoutX="127.0" layoutY="49.0" text="Name :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="textfield_name" layoutX="182.0" layoutY="46.0" />
+                                                <Label fx:id="label_phone" layoutX="125.0" layoutY="99.0" text="Phone :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="textfield_phone" layoutX="182.0" layoutY="96.0" />
+                                                <Label fx:id="label_email" layoutX="131.0" layoutY="150.0" text="Email :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="textfield_email" layoutX="182.0" layoutY="147.0" />
+                                                <Label fx:id="label_sexe" layoutX="134.0" layoutY="195.0" text="Sexe :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <ComboBox fx:id="combobox_sexe" layoutX="182.0" layoutY="192.0" prefHeight="26.0" prefWidth="148.0" />
+                                                <AnchorPane layoutX="195.0" layoutY="256.0" prefHeight="112.0" prefWidth="95.0" stylesheets="@Color_MenuFront.css">
+                                                    <children>
+                                                        <ImageView fx:id="imageview_updateuser" fitHeight="149.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                                                        <Button fx:id="btn_update_image" layoutY="109.0" mnemonicParsing="false" onAction="#update_image" prefHeight="40.0" prefWidth="120.0" text="Insert" />
+                                                    </children>
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                </AnchorPane>
+                                                <Line endX="12.4000244140625" endY="284.0" layoutX="408.0" layoutY="46.0" startX="12.4000244140625" startY="-13.599998474121094" />
+                                                <Label fx:id="label_pw_actuel" layoutX="556.0" layoutY="70.0" text="Password actuelle :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="textfield_pw_actuel" layoutX="679.0" layoutY="67.0" />
+                                                <Label fx:id="label_pw_nouvel" layoutX="550.0" layoutY="120.0" text="Nouvelle password :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <PasswordField fx:id="passwordfield_pw_nouvel" layoutX="679.0" layoutY="117.0" />
+                                                <Label fx:id="label_pw_nouvel_confirm" layoutX="487.0" layoutY="171.0" text="Confirmer nouvelle password :">
+                                                    <font>
+                                                        <Font name="Tahoma" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <PasswordField fx:id="passwordfield_pw_nouvel_confirm" layoutX="679.0" layoutY="168.0" />
+                                                <Button fx:id="btn_update_profil" layoutX="223.0" layoutY="464.0" mnemonicParsing="false" onAction="#update_profil" text="Update" />
+                                                <Button fx:id="btn_delete" layoutX="373.0" layoutY="464.0" mnemonicParsing="false" onAction="#delete_profil" text="Delete Compte" />
+                                                <Button fx:id="btn_update_pw" layoutX="699.0" layoutY="238.0" mnemonicParsing="false" onAction="#update_pw" text="Update Password" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane fx:id="gestion_users_form" layoutX="99.0" layoutY="143.0" prefHeight="555.0" prefWidth="897.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="527.0" prefWidth="870.0" stylesheets="@Color_MenuBack.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="262.0" prefWidth="870.0" stylesheets="@Color_MenuBack.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TextField fx:id="textfield_search" layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="274.0" styleClass="search" stylesheets="@Color_MenuBack.css" AnchorPane.bottomAnchor="217.59999999999997" AnchorPane.leftAnchor="13.600000000000023" AnchorPane.rightAnchor="582.0" AnchorPane.topAnchor="14.0" />
+                                          <Button fx:id="btn_search" layoutX="297.0" layoutY="16.0" mnemonicParsing="false" onAction="#search_user" text="Search" />
+                                          <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="20.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/search.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="btn_excel" layoutX="739.0" layoutY="17.0" mnemonicParsing="false" onAction="#exporter_excel" text="Expoter vers EXCEL" />
+                                          <TableView fx:id="users_tableview" layoutX="13.0" layoutY="56.0" onMouseClicked="#SelectUser" prefHeight="192.0" prefWidth="845.0" AnchorPane.bottomAnchor="14.399999999999977" AnchorPane.leftAnchor="12.799999999999955" AnchorPane.rightAnchor="11.799999999999955" AnchorPane.topAnchor="56.0">
+                                            <columns>
+                                                <TableColumn fx:id="col_id" prefWidth="142.40000891685486" text="Id" visible="false" />
+                                              <TableColumn fx:id="col_name" prefWidth="142.40000891685486" text="Name" />
+                                              <TableColumn fx:id="col_phone" prefWidth="173.60000610351562" text="Phone" />
+                                                <TableColumn fx:id="col_email" prefWidth="237.6000518798828" text="Email" />
+                                                <TableColumn fx:id="col_password" minWidth="0.0" prefWidth="179.199951171875" text="Password" />
+                                                <TableColumn fx:id="col_sexe" prefWidth="114.39996337890625" text="Sexe" />
+                                                <TableColumn fx:id="col_image" prefWidth="114.39996337890625" text="Image path" visible="false" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label fx:id="label_name_gestion" layoutX="70.0" layoutY="313.0" text="Name :">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfield_name_gestion" layoutX="120.0" layoutY="309.0" />
+                                    <Label fx:id="control_saisi_gestion_name" layoutX="121.0" layoutY="335.0" prefHeight="18.0" prefWidth="148.0" text="Control saisi" textFill="RED" visible="false" />
+                                    <Label fx:id="label_phone_gestion" layoutX="68.0" layoutY="356.0" text="Phone :">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfield_phone_gestion" layoutX="120.0" layoutY="352.0" />
+                                    <Label fx:id="control_saisi_gestion_phone" layoutX="121.0" layoutY="378.0" prefHeight="18.0" prefWidth="148.0" text="Control saisi" textFill="RED" visible="false" />
+                                    <Label fx:id="label_email_gestion" layoutX="72.0" layoutY="404.0" text="Email :">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfield_email_gestion" layoutX="120.0" layoutY="400.0" />
+                                    <Label fx:id="control_saisi_gestion_email" layoutX="121.0" layoutY="426.0" prefHeight="18.0" prefWidth="148.0" text="Control saisi" textFill="RED" visible="false" />
+                                    <Label fx:id="label_password_gestion" layoutX="48.0" layoutY="452.0" text="Password :">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="textfield_password_gestion" layoutX="120.0" layoutY="448.0" />
+                                    <Label fx:id="control_saisi_gestion_pw" layoutX="121.0" layoutY="473.0" prefHeight="18.0" prefWidth="149.0" text="Control saisi" textFill="RED" visible="false" />
+                                    <Label fx:id="label_sexe_gestion" layoutX="75.0" layoutY="496.0" text="Sexe :">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="combobox_sexe_gestion" layoutX="120.0" layoutY="492.0" prefHeight="25.0" prefWidth="146.0" />
+                                    <AnchorPane layoutX="328.0" layoutY="329.0" prefHeight="149.0" prefWidth="120.0" stylesheets="@Color_MenuBack.css">
+                                       <children>
+                                          <ImageView fx:id="imageview_user" fitHeight="149.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Button fx:id="btn_insert_image" layoutY="109.0" mnemonicParsing="false" onAction="#inserer_image" prefHeight="40.0" prefWidth="120.0" text="Insert" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Button fx:id="btn_add" layoutX="573.0" layoutY="331.0" mnemonicParsing="false" onAction="#add_user" prefHeight="35.0" prefWidth="85.0" stylesheets="@Color_MenuBack.css" text="Add" />
+                                    <Button fx:id="btn_update" layoutX="573.0" layoutY="422.0" mnemonicParsing="false" onAction="#update_user" prefHeight="35.0" prefWidth="85.0" stylesheets="@Color_MenuBack.css" text="Update" />
+                                    <Button fx:id="btn_delete" layoutX="682.0" layoutY="331.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="35.0" prefWidth="85.0" stylesheets="@Color_MenuBack.css" text="Delete" />
+                                    <Button fx:id="btn_clear" layoutX="682.0" layoutY="422.0" mnemonicParsing="false" onAction="#clear_textfield" prefHeight="35.0" prefWidth="85.0" stylesheets="@Color_MenuBack.css" text="Clear" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

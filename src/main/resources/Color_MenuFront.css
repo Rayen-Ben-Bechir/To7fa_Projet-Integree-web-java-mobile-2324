@@ -1,0 +1,115 @@
+#AP_ABOVE {
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .2px .4px;
+}
+
+#AP_SEMI_ABOVE {
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:.2px .4px .4px .4px;
+}
+
+#close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+#close:hover{
+    -fx-background-color:#fb3d63;
+}
+
+#minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+#minimize:hover{
+    -fx-background-color:#ddd;
+}
+
+#AP_LEFT {
+    -fx-background-color: linear-gradient(to right top, #D2B48C, #8B4513);
+}
+
+#btn_home ,
+#btn_profil,
+#btn_musee,
+#btn_evenement,
+#btn_acceuil,
+#btn_panier {
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:15px;
+    -fx-font-family:"Arial";
+    -fx-alignment:CENTER-LEFT;
+}
+
+#btn_logout{
+    -fx-background-color:#2c84bf;
+    -fx-background-radius:10px;
+    -fx-cursor:hand;
+}
+#btn_logout:hover{
+    -fx-background-color:#1593e7;
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 6,0,0,0);
+}
+
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
+
+#card {
+    -fx-background-color: linear-gradient(to right, #ffffff, #f5f5dc);
+    -fx-background-radius: 4px;
+}
+
+#textfield_name ,
+#textfield_phone ,
+#textfield_email ,
+#textfield_pw_actuel ,
+#passwordfield_pw_nouvel ,
+#passwordfield_pw_nouvel_confirm {
+    -fx-background-color:linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius:4px;
+    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width:.8px;
+    -fx-font-family:"Tahoma";
+    -fx-border-radius:4px;
+}
+#textfield_name:focused ,
+#textfield_phone:focused ,
+#textfield_email:focused ,
+#textfield_pw_actuel:focused ,
+#passwordfield_pw_nouvel:focused ,
+#passwordfield_pw_nouvel_confirm:focused {
+    -fx-background-color:#fff;
+    -fx-border-width:1px;
+}
+
+#btn_update_image{
+    -fx-background-color:transparent;
+    -fx-text-fill:red;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-cursor:hand;
+}
+
+#btn_update_profil,
+#btn_update_pw,
+#btn_delete {
+    -fx-background-color: #813535;
+    -fx-background-radius:30px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+#btn_update_profil:hover,
+#btn_update_pw:hover,
+#btn_delete:hover {
+    -fx-background-color:#22ad72;
+}
