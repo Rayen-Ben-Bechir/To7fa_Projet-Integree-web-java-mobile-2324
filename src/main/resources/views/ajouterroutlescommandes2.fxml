@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scene2" prefHeight="847.0" prefWidth="1315.0" styleClass="design2" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Ajoutertoutlescommandes2">
+    <children>
+        <VBox layoutX="295.0" layoutY="33.0" prefHeight="753.0" prefWidth="615.0" stylesheets="@../css/style.css">
+            <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="99.0" prefWidth="606.0">
+               <children>
+                      <Label prefHeight="29.0" prefWidth="283.0" text="Verifaction">
+                          <font>
+                              <Font name="Constantia Bold" size="24.0" />
+                          </font>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                      </Label>
+                  <ImageView fitHeight="54.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-ordre-d'achat-64.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+                <Separator prefWidth="200.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Separator>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="461.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="204.0" text="Nombres Of Articles :">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nbr" prefHeight="22.0" prefWidth="128.0" text="Add The Card ">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="95.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-compteur-80.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="461.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Price Of Article  :">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceVeri" prefHeight="22.0" prefWidth="128.0" text="Add The Card ">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="130.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8-étiquette-de-prix-usd-80.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="461.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Card                      :">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cardVeri" prefHeight="22.0" prefWidth="128.0" text="Add The Card ">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="130.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/carte-de-credit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="461.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Email">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailVeri" prefHeight="22.0" prefWidth="128.0" text="Add The Card ">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="130.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="49.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/carte-de-credit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="190.0" prefWidth="481.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text="Article                  :">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Cambria" size="22.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@../css/style.css">
+                     <content>
+                        <AnchorPane prefHeight="184.0" prefWidth="198.0" styleClass="transparent2" stylesheets="@../css/style.css">
+                           <children>
+                              <GridPane fx:id="grid" layoutX="7.0" layoutY="7.0" prefHeight="3.0" prefWidth="8.0">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                     </content>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </ScrollPane>
+               </children>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </HBox>
+                <HBox alignment="BOTTOM_CENTER" prefHeight="67.0" prefWidth="606.0">
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="50.0" />
+                    </VBox.margin>
+                    <children>
+                        <Button fx:id="backo" mnemonicParsing="false" onAction="#backpanier" prefHeight="51.0" prefWidth="131.0" styleClass="use-payment" stylesheets="@../css/style.css" text="Cancel" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                        </Button>
+                        <Button fx:id="orderter" mnemonicParsing="false" onAction="#buy" prefHeight="49.0" prefWidth="135.0" styleClass="use-payment" stylesheets="@../css/style.css" text="Order" textFill="WHITE" />
+                    </children>
+                </HBox>
+            </children>
+            <styleClass>
+                <String fx:value="fruit-item" />
+                <String fx:value="transparent" />
+            </styleClass>
+        </VBox>
+      <ImageView fitHeight="255.0" fitWidth="204.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/422753690_409252038212984_8647405955157622496_n%20(1).png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="979.0" layoutY="170.0" prefHeight="408.0" prefWidth="311.0" stylesheets="@../css/style.css">
+         <styleClass>
+            <String fx:value="fruit-item" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <TextArea prefHeight="86.0" prefWidth="311.0" styleClass="fruit-item" stylesheets="@../css/style.css" text="To complete your order, &#10;please enter the text shown">
+               <font>
+                  <Font name="Constantia" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextArea>
+            <ImageView fx:id="cap" fitHeight="77.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <TextField fx:id="captchaTF" prefHeight="26.0" prefWidth="260.0" promptText="write the word here" styleClass="fruit-item2" stylesheets="@../css/style.css">
+               <VBox.margin>
+                  <Insets left="50.0" right="30.0" top="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="captch_incorrect" prefHeight="17.0" prefWidth="126.0" textFill="RED">
+               <VBox.margin>
+                  <Insets left="80.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
